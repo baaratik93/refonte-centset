@@ -5,6 +5,8 @@ import Blog from "./components/Blog"
 import Projets from "./components/Projets"
 import Actus from "./components/Actus"
 import Contacts from "./components/Contacts"
+import Home from "./Home"
+import Error from "./components/Error"
 import {BrowserRouter , Routes, Route } from "react-router-dom";
 import styled from "@emotion/styled";
 
@@ -22,10 +24,12 @@ function App() {
   return <BrowserRouter>
    <MenuNav/>
         <Routes>
+          <Route exact  path="/" element={<Home/>}/>
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/projets" element={<Projets/>}/>
           <Route path="/Actus" element={<Actus/>}/>
           <Route path="/Contacts" element={<Contacts/>}/>
+          <Route element={<Error/>}/>
       </Routes>
       <CustomFooter/>
       </BrowserRouter>
