@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import React from "react"
 import { MenuNav } from "./components/MenuNav";
 import Blog from "./components/Blog"
@@ -9,6 +8,7 @@ import Home from "./Home"
 import Error from "./components/Error"
 import {BrowserRouter , Routes, Route } from "react-router-dom";
 import styled from "@emotion/styled";
+import {Box} from "@chakra-ui/react"
 
 const CustomFooter = styled.div`
 position: fixed;
@@ -23,6 +23,7 @@ left:0;
 function App() {
   return <BrowserRouter>
    <MenuNav/>
+        <Box p={10}>
         <Routes>
           <Route exact  path="/" element={<Home/>}/>
           <Route path="/blog" element={<Blog/>}/>
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Contacts" element={<Contacts/>}/>
           <Route element={<Error/>}/>
       </Routes>
+        </Box>
       <CustomFooter/>
       </BrowserRouter>
 }
