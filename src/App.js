@@ -1,23 +1,15 @@
 import React from "react"
 import { MenuNav } from "./components/MenuNav";
-import Blog from "./components/Blog"
-import Projets from "./components/Projets"
-import Actus from "./components/Actus"
-import Contacts from "./components/Contacts"
-import Home from "./Home"
-import Error from "./components/Error"
+import Blog from "./pages/Blog"
+import Projets from "./pages/Projets"
+import Actus from "./pages/Actus"
+import Contacts from "./pages/Contacts"
+import Home from "./pages/Home"
+import Error from "./pages/Error"
 import {BrowserRouter , Routes, Route } from "react-router-dom";
-import styled from "@emotion/styled";
-import {Box} from "@chakra-ui/react"
-
-const CustomFooter = styled.div`
-position: fixed;
-background: wheat;
-height:10vh;
-bottom:0;
-right:0;
-left:0;
-`
+import {Box,Text} from "@chakra-ui/react"
+import {TriangleDownIcon} from "@chakra-ui/icons"
+import CustomFooter from "./components/CustomFooter";
 
 
 function App() {
@@ -30,10 +22,14 @@ function App() {
           <Route path="/projets" element={<Projets/>}/>
           <Route path="/Actus" element={<Actus/>}/>
           <Route path="/Contacts" element={<Contacts/>}/>
-          <Route element={<Error/>}/>
+          <Route path="*" element={<Error/>}/>
       </Routes>
         </Box>
-      <CustomFooter/>
+        <CustomFooter>
+               <Text> <TriangleDownIcon/></Text>
+               <Text textAlign="center" fontSize={16} justifyContent="center">&copy;All right reserved 2022 .Inc </Text>
+               <Text textAlign="right">Réglements & autorisations</Text>
+        </CustomFooter>
       </BrowserRouter>
 }
 

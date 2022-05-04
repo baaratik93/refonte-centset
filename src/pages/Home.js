@@ -1,8 +1,7 @@
 import { Image, Text, HStack, VStack, Box, Button } from "@chakra-ui/react";
-import eco from "./images/eco.png";
-import sailor from "./images/sailor.png";
-import isometric from "./images/isometric.png";
-import work from "./images/work.png";
+import sailor from "../images/sailor.png";
+import isometric from "../images/isometric.png";
+import work from "../images/work.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -11,24 +10,25 @@ export const Home = () => {
     <>
       <Box
         display="flex"
-        flexDirection={["column", "row-reverse", "row-reverse", "row-reverse"]}
+        gap={5}
+        flexDirection={["column", "column-reverse", "row-reverse", "row-reverse"]}
         // display="grid"
         // gridTemplateColumns="1fr 1fr"
         justifyContent="space-around"
         alignItems="center"
+        justifyItems="center"
       >
          <Carousel autoPlay autoFocus infiniteLoop interval={2500}>
         <Box>
-        <Image src={sailor} width={["130px", "190px", "210px", "330px"]} />
+        <Image src={sailor}  maxW="md" maxH="md" />
         {/* <Text pb={8}>Ecology</Text> */}
         </Box>
 
-        <Image src={isometric} width={["130px", "190px", "210px", "330px"]} />
-        <Image src={eco} width={["130px", "190px", "210px", "330px"]} />
-        <Image src={work} width={["130px", "190px", "210px", "330px"]} />
+        <Image src={isometric}   maxW="md" maxH="md" />
+        <Image src={work}   maxW="md" maxH="md" />
       </Carousel>
-        <VStack gap={1}>
-          <Text textAlign="center">
+        <VStack gap={1} ml={["","","",150]}>
+          <Text textAlign="center" fontSize={["16px","20","",""]}>
             Oeuvrez à faire du Sénégal un pays d’exception et à créer des
             solutions pour chaque besoin de nos concitoyens.
           </Text>
@@ -37,6 +37,7 @@ export const Home = () => {
             _hover={{ color: "lime" }}
             fontSize={["11", "12", "14", "16"]}
           >
+
             <Text>Agissez avec nous!</Text>
           </Button>
         </VStack>
