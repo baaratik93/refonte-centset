@@ -1,17 +1,32 @@
-import { Image, Text } from "@chakra-ui/react";
-import logo from "./images/logo.png";
+import { Image, Text,HStack,VStack,Box,Button} from "@chakra-ui/react";
+import eco from "./images/eco.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export const Home = () => {
-  return (
-    <div>
-      <Text color="blue.500" p={4}>This is responsive text
-
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum iure, accusantium animi ut laudantium dolore illum facilis optio doloribus minus quam necessitatibus. Harum sed sunt odit. Consequatur quibusdam illo dolorum?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed necessitatibus quidem numquam a perspiciatis nihil saepe illum, quas quaerat perferendis consectetur natus doloribus quae obcaecati alias. Atque iure fugiat laboriosam.
-      </Text>
-      <Image src={logo} alt="a kitten" sx={{ filter: "grayscale(100%)" }} />
-    </div>
-  );
+  return <Box display="flex" flexDirection={["column", "row-reverse", "row-reverse", "row-reverse"]} justifyContent="center" alignItems="center">
+    <Image src={eco} width={["130px","190px","330px","440px"]} />
+    <VStack gap={3}>
+    <Text textAlign="center">
+    Oeuvrez à faire du Sénégal un pays d’exception et à créer des solutions pour chaque besoin de nos concitoyens.
+    </Text>
+    <Button colorScheme="whatsapp" _hover={{color:"lime"}}  fontSize={["11", "12", "14", "16"]}><Text>Agissez avec nous!</Text></Button>
+    </VStack>
+    <Carousel>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
+    </Box>
 };
 
 export default Home;
