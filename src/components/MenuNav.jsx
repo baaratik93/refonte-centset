@@ -6,7 +6,9 @@ import HamburgerMenu from "./HamburgerMenu";
 
 export const MenuNav = () => {
 
-  return  <HStack pos="sticky" top={0}  as="nav"  p={2}>
+  return  <HStack pos="sticky" top={0}  as="nav" bg="blue.50" 
+  zIndex={10}
+  p={1}>
                  
                   <Logo/>
                   <Spacer/>

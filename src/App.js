@@ -23,7 +23,7 @@ left:0;
 function App() {
   return <BrowserRouter>
    <MenuNav/>
-        <Box p={10}>
+        <Box px={5} m={1}>
         <Routes>
           <Route exact  path="/" element={<Home/>}/>
           <Route path="/blog" element={<Blog/>}/>
