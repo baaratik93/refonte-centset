@@ -1,4 +1,4 @@
-import { Image, Text, HStack, VStack, Box, Button } from "@chakra-ui/react";
+import { Image, Text, VStack, Box, Button } from "@chakra-ui/react";
 import sailor from "../images/sailor.png";
 import isometric from "../images/isometric.png";
 import work from "../images/work.png";
