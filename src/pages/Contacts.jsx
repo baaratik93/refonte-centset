@@ -27,12 +27,12 @@ const Contacts = () => {
 
         <Flex direction="column"  p={17} width="md">
           <FormControl isRequired>
-            <FormLabel htmlFor="first-name">Votre Nom Complet</FormLabel>
-            <Input id="first-name" placeholder="First name" />
+            <FormLabel htmlFor="nom-prenom">Votre Nom Complet</FormLabel>
+            <Input id="nom-prenom" placeholder="nom & prenom" />
           </FormControl>
           <FormControl isRequired>
-            <FormLabel htmlFor="first-name">Votre Email</FormLabel>
-            <Input id="first-name" placeholder="First name" />
+            <FormLabel htmlFor="email">Votre Email</FormLabel>
+            <Input id="email" placeholder="email@gmail.com" />
           </FormControl>
 
           <FormControl>

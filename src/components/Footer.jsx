@@ -8,12 +8,10 @@ export const Footer = () => {
 
 
     const CustomFooter = styled.div`
-    position: fixed;
+  
     background: wheat;
     height: 10vh;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    
   `;
 
   return (
