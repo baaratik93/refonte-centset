@@ -1,43 +1,33 @@
 import React from "react";
 import { MenuNav } from "./components/MenuNav";
-import Blog from "./components/Blog";
-import Projets from "./components/Projets";
-import Actus from "./components/Actus";
-import Contacts from "./components/Contacts";
-import Home from "./Home";
-import Error from "./components/Error";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import styled from "@emotion/styled"; 
+import Blog from "./pages/Blog";
+import Initiative from "./pages/Initiative";
+import Contacts from "./pages/Contacts";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import { ToggleColorMode } from "./components/ToggleColorMode";
 
-const CustomFooter = styled.div`
-  position: fixed;
-  background: wheat;
-  height: 10vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
-`;
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <MenuNav />
-   
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/projets" element={<Projets />} />
-            <Route path="/Actus" element={<Actus />} />
-            <Route path="/Contacts" element={<Contacts />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-         
-        <CustomFooter />
+
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/initiative" element={<Initiative />} />
+
+          <Route path="/Contacts" element={<Contacts />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
       </BrowserRouter>
 
       <ToggleColorMode />
+      <Footer />
     </>
   );
 }

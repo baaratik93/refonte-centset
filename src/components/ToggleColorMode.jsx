@@ -9,7 +9,7 @@ export const ToggleColorMode = () => {
     <Button
       onClick={() => toggleColorMode ()}
       pos="fixed"
-      bottom="5"
+      bottom="10"
       right="3"
       zIndex="1"
       variant="outline"

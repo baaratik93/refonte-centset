@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { BellIcon, AddIcon, CopyIcon } from "@chakra-ui/icons";
-import {AiOutlineTeam} from "react-icons/ai";
+import { BellIcon, AddIcon } from "@chakra-ui/icons";
+import {AiOutlineTeam, AiOutlineContacts} from "react-icons/ai"; 
 const ListMenu = () => {
+ 
   return (
     <Box
       alignItems="center"
@@ -28,14 +29,15 @@ const ListMenu = () => {
         fontSize={["6", "12", "16", "18"]}
         mx="2"
         display="flex"
+        alignItems="center"
       >
-        <AiOutlineTeam mx="2px" />
+        <AiOutlineTeam  />
       Notre Equipe
       </ChakraLink>
       <ChakraLink
         _hover="textDecoration:none"
         as={Link}
-        to="/projets"
+        to="/initiative"
         fontSize={["6", "12", "16", "18"]}
         mx="2"
       >
@@ -45,7 +47,7 @@ const ListMenu = () => {
       <ChakraLink
         _hover="textDecoration:none"
         as={Link}
-        to="/actus"
+        to="/blog"
         fontSize={["6", "12", "16", "18"]}
         mx="2"
       >
@@ -58,13 +60,15 @@ const ListMenu = () => {
         to="/contacts"
         fontSize={["6", "12", "16", "18"]}
         mx="2"
+        display="flex"
+        alignItems="center"
       >
-        <CopyIcon mx="2px" />
+        <AiOutlineContacts mx="2px" />
         Contacts
       </ChakraLink>
       {/* <ChakraLink as={Link} to="/blog">Blog</ChakraLink> */}
     </Box>
   );
 };
-
+ 
 export default ListMenu;

@@ -1,12 +1,13 @@
 import { Image, Text,  Button, Heading, Grid, GridItem } from "@chakra-ui/react";
-import eco from "./images/eco.png";
+import eco from "../images/eco.png";
   
 export const Home = () => {
   return (
 
 
 <Grid 
-px={"5rem"}
+display={["column","column", "flex"]}
+px={["1rem","5rem","5rem"]}
 templateColumns='repeat(2, 1fr)' gap={3} alignItems="center">
   <GridItem display={"grid"} alignContent="center" justifyItems={"start"} w='100%' h='100%'  alignItems="center">
   <Heading textTransform="uppercase">
