@@ -7,6 +7,7 @@ useSystemColorMode: true,
      },
      styles: {
          global: {
+      
             body: {
               
                 margin: 0,
@@ -19,9 +20,7 @@ useSystemColorMode: true,
                 "font-family" : 
                 "source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
               },
-              a : {
-                 
-              }
+              
               
               
               
