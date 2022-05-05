@@ -1,10 +1,10 @@
 import React from 'react'
-import {Heading, FormControl,FormLabel,Input,Textarea} from "@chakra-ui/react"
+import {Heading, FormControl,FormLabel,Input,Textarea,Container} from "@chakra-ui/react"
 const Contacts = () => {
   return <>
   <Heading  my={3}>Remplissez ce formulaire puis envoyez!</Heading>
 
-  <form action="">
+  <Container as="form" onSubmit={()=>{alert("Submitted")}} >
    < FormControl>
       <FormLabel>Prénom</FormLabel>
       <Input type="text"/> 
@@ -14,8 +14,8 @@ const Contacts = () => {
       <Input type="text"/> 
 </FormControl>
 < FormControl>
-      <FormLabel>Adresse</FormLabel>
-      <Input type="Text"/> 
+      <FormLabel>Adresse email</FormLabel>
+      <Input type="email"/> 
 </FormControl>
 < FormControl>
       <FormLabel>Objet du message</FormLabel>
@@ -28,8 +28,7 @@ const Contacts = () => {
 < FormControl mt={3}>
       <Input bg="whatsapp.500" type="submit" value="Envoyer"/>
 </FormControl>
-
-  </form>
+</Container>
   </>
 }
 

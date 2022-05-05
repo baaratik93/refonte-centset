@@ -10,7 +10,7 @@ import { useState } from "react";
 export const MenuNav = () => {
   const [watch, setWatch] = useState(false)
 
-  return  <HStack pos="sticky" top={0}  as="nav" bg="blue.50" 
+  return  <HStack pos="sticky" top={0}  as="nav" bg="green.300" 
   zIndex={10}
   p={1}>
                  

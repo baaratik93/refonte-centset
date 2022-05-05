@@ -10,8 +10,7 @@ export const Home = () => {
     <>
       <Box
         display="flex"
-        gap={5}
-        flexDirection={["column", "column-reverse", "row-reverse", "row-reverse"]}
+        flexDirection={["column", "column", "row-reverse", "row-reverse"]}
         // display="grid"
         // gridTemplateColumns="1fr 1fr"
         justifyContent="space-around"
@@ -34,11 +33,11 @@ export const Home = () => {
           </Text>
           <Button
             colorScheme="whatsapp"
-            _hover={{ color: "lime" }}
+            _hover={{ bg: "lime" }}
             fontSize={["11", "12", "14", "16"]}
           >
 
-            <Text>Agissez avec nous!</Text>
+            <Text>Rejoindre la communauté!</Text>
           </Button>
         </VStack>
       </Box>

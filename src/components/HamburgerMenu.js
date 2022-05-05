@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
         <MenuItem  icon={<BellIcon/>} onClick={()=> router("/blog")}>Blog</MenuItem>
         <MenuItem icon={<AddIcon/>} onClick={()=> router("/projets")}
         >Projets</MenuItem>
-        <MenuItem icon={<AttachmentIcon/>} onClick={()=> router("/actus")}>Actus</MenuItem>
+        <MenuItem icon={<AttachmentIcon/>} onClick={()=> router("/team")}>Equipe</MenuItem>
         <MenuItem icon={<CopyIcon/>} onClick={()=> router("/contacts")}>Contacts</MenuItem>
       </MenuList>
     </>
