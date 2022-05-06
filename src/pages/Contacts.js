@@ -2,9 +2,8 @@ import React from 'react'
 import {Heading, FormControl,FormLabel,Input,Textarea,Container} from "@chakra-ui/react"
 const Contacts = () => {
   return <>
-  <Heading  my={3}>Remplissez ce formulaire puis envoyez!</Heading>
-
-  <Container as="form" onSubmit={()=>{alert("Submitted")}} >
+   <Container as="form" onSubmit={()=>{alert("Submitted")}} >
+   <Heading  my={10}>Remplissez ce formulaire puis envoyez!</Heading>
    < FormControl>
       <FormLabel>Prénom</FormLabel>
       <Input type="text"/> 
