@@ -4,6 +4,7 @@ import ListMenu from "./ListMenu"
 import HamburgerMenu from "./HamburgerMenu";
 import {Search2Icon} from "@chakra-ui/icons"
 import { useState } from "react";
+import { ToggleColorMode } from "./ToggleColorMode";
 
 
 
@@ -21,7 +22,8 @@ export const MenuNav = () => {
                     watch && <Input pos="fixed" left="12%"  w={["65%","65%","84%","70%" ]}maxH="35px" bg="white"/>
                   }
                 <Spacer/>
-                <Search2Icon onClick={()=> setWatch(!watch)}/>
+                {/* <Search2Icon onClick={()=> setWatch(!watch)}/> */}
                 <HamburgerMenu/>
+                <ToggleColorMode/>
                 </HStack>
               };
