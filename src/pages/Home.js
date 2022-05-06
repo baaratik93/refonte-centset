@@ -1,47 +1,81 @@
-import { Image, Text, VStack, Box, Button } from "@chakra-ui/react";
-import sailor from "../images/sailor.png";
-import isometric from "../images/isometric.png";
-import work from "../images/work.png";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import {
+  Image,
+  Text,
+  Button,
+  Heading,
+  Grid,
+  GridItem, 
+  Box,
+  Badge
+} from "@chakra-ui/react";
+import eco from "../images/eco.png";
 
 export const Home = () => {
   return (
     <>
-      <Box
-        display="flex"
-        flexDirection={["column", "column", "row-reverse", "row-reverse"]}
-        // display="grid"
-        // gridTemplateColumns="1fr 1fr"
-        justifyContent="space-around"
+      <Grid
+        display={["column", "column", "flex"]}
+        px={["1rem", "5rem", "5rem"]}
+        templateColumns="repeat(2, 1fr)"
+        gap={3}
         alignItems="center"
-        justifyItems="center"
       >
-         <Carousel autoPlay autoFocus infiniteLoop interval={2500}>
-        <Box>
-        <Image src={sailor}  maxW="md" maxH="md" />
-        {/* <Text pb={8}>Ecology</Text> */}
-        </Box>
-
-        <Image src={isometric}   maxW="md" maxH="md" />
-        <Image src={work}   maxW="md" maxH="md" />
-      </Carousel>
-        <VStack gap={1} ml={["","","",150]}>
-          <Text textAlign="center" fontSize={["16px","20","",""]}>
+        <GridItem
+          display={"grid"}
+          alignContent="center"
+          justifyItems={"start"}
+          w="100%"
+          h="100%"
+          alignItems="center"
+        >
+          <Heading textTransform="uppercase">
+            La Technologie et l’Ecologie adaptées au Sénégal
+          </Heading>
+          <Text>
             Oeuvrez à faire du Sénégal un pays d’exception et à créer des
             solutions pour chaque besoin de nos concitoyens.
           </Text>
           <Button
             colorScheme="whatsapp"
-            _hover={{ bg: "lime" }}
+            _hover={{ color: "white" }}
             fontSize={["11", "12", "14", "16"]}
           >
-
-            <Text>Rejoindre la communauté!</Text>
+            <Text>Agissez avec nous!</Text>
           </Button>
-        </VStack>
-      </Box>
-     
+        </GridItem>
+        <GridItem w="100%" h="100%">
+          <Image src={eco} size="100%" />
+        </GridItem>
+      </Grid>
+
+      {/* ffff */}
+      <Grid templateColumns='repeat(2, 1fr)' gap={2}  px={"5rem"} py={"3rem"}  h="100vh">
+        
+     <Heading  align="center" >Notre Mission</Heading> 
+ 
+   <Box maxW={"sm"} borderWidth="1px" borderRadius='lg' overflow='hidden'>
+   <Box display='flex' alignItems='baseline'>
+   <Image src={eco} alt="" w="50%"/>
+          <Badge borderRadius='full' px='2' colorScheme='teal'>
+            New
+          </Badge>
+          <Box
+            color='gray.500'
+            fontWeight='semibold'
+            letterSpacing='wide'
+            fontSize='xs'
+            textTransform='uppercase'
+            ml='2'
+          >
+            dddd
+          </Box>
+        </Box>
+
+   </Box>
+
+
+ 
+      </Grid>
     </>
   );
 };
