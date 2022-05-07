@@ -4,10 +4,14 @@ import {useColorMode} from "@chakra-ui/react"
 const CustomFooter = ({children}) => {
 const {colorMode} = useColorMode()
 const footFontColor = {
-  dark: "lime",
-  lignt: "black"
+  dark: "white",
+  light: "lightgreen"
 }
-  return <Box  pos={["","","fixed"]} color={footFontColor[colorMode]} bottom={0} right={0} left={0} bg="black">
+const FootBackground = {
+  dark: "grey",
+  light: "black"
+}
+  return <Box  pos={["","","fixed"]} color={footFontColor[colorMode]} bottom={0} right={0} left={0} bg={FootBackground[colorMode]} >
       {children}
   </Box>
 }

@@ -6,18 +6,18 @@ import td from "../images/td.jpg"
 import mnf from "../images/mnf.jpg"
 export default [
     {
-        image:md, name:"Mamadou DIOUF" ,title:"Président de l'association",link:"/equipe/1"
+        image:md, name:"Mamadou DIOUF" ,title:"Président de l'association",id:"1"
     },
     {
-        image:an, name:"Arouna Ndiage" ,title:"Sécrétaire général",link:"/equipe/2"
+        image:an, name:"Arouna Ndiage" ,title:"Sécrétaire général",id:"2"
     },
     {
-        image:moustapha, name: "Moustapha Diallo", title:"Chargé d'organisation",link:"/equipe/3"
+        image:moustapha, name: "Moustapha Diallo", title:"Chargé d'organisation",id:"3"
     },
     {
-        image:md, name:"Dione Gomis" ,title:"Chargé des relation extérieurs",link:"/equipe/4"
+        image:md, name:"Dione Gomis" ,title:"Chargé des relation extérieurs",id:"4"
     },
     {
-        image:mm, name:"Mamadou MBAYE", title:"Vice-président",link:"/equipe/5"
+        image:mm, name:"Mamadou MBAYE", title:"Vice-président",id:"5"
     }
 ]

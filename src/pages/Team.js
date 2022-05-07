@@ -5,6 +5,9 @@ import {Link} from "react-router-dom"
 import actors from '../utils/actors'
 
 const Team = () => {
+  function ActorHandler(id) {
+    alert(id)
+  }
   return <VStack>
     <Heading m={10} >
       Notre équipe
@@ -18,7 +21,7 @@ const Team = () => {
     ]}
     >
       {
-        actors.map(actor => <Link to={actor.link} > <Actor image={actor.image} name={actor.name} title={actor.title}/></Link>)
+        actors.map(actor =>  <Actor id={actor.id} image={actor.image} name={actor.name} title={actor.title}/>)
       }
     
     </Box>
